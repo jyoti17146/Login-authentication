@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animated Auth | Level 2</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <!-- animated background blobs -->
+  <div class="bg-blob bg-blob-1"></div>
+  <div class="bg-blob bg-blob-2"></div>
+  <div class="bg-blob bg-blob-3"></div>
+
+  <main class="center-wrapper">
+    <section class="card" id="authCard">
+      <div class="card-header">
+        <h1>Welcome Back</h1>
+        <p>Sign in to continue your journey.</p>
+      </div>
+
+      <div class="tabs">
+        <button id="registerTab" class="tab active">Register</button>
+        <button id="loginTab" class="tab">Login</button>
+      </div>
+
+      <!-- REGISTER FORM -->
+      <form id="registerForm" class="form active-form" autocomplete="off">
+        <div class="field">
+          <label for="regUsername">Username</label>
+          <div class="input-wrapper">
+            <span class="icon">👤</span>
+            <input type="text" id="regUsername" placeholder="Create a username" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="regPassword">Password</label>
+          <div class="input-wrapper">
+            <span class="icon">🔒</span>
+            <input type="password" id="regPassword" placeholder="Create a strong password" required />
+          </div>
+        </div>
+
+        <button type="submit" class="btn primary" data-ripple>
+          Create account
+        </button>
+      </form>
+
+      <!-- LOGIN FORM -->
+      <form id="loginForm" class="form" autocomplete="off">
+        <div class="field">
+          <label for="loginUsername">Username</label>
+          <div class="input-wrapper">
+            <span class="icon">👤</span>
+            <input type="text" id="loginUsername" placeholder="Enter your username" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="loginPassword">Password</label>
+          <div class="input-wrapper">
+            <span class="icon">🔑</span>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required />
+          </div>
+        </div>
+
+        <button type="submit" class="btn primary" data-ripple>
+          Login
+        </button>
+      </form>
+
+      <p id="message"></p>
+
+      <!-- SECURED PAGE INSIDE CARD -->
+      <div id="securePage" class="secure hidden">
+        <h2 id="secureTitle">Welcome!</h2>
+        <p class="secure-text">
+          You’ve unlocked the <span>secured zone</span>.  
+          This area is only visible after successful login.
+        </p>
+        <button id="logoutBtn" class="btn ghost" data-ripple>Logout</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
